@@ -49,6 +49,81 @@ import './Grid.css'
 {{/grid}}
 ```
 
+### Smart with dividers (responsive)
+```hbs
+{{#> grid grid--modifier="pf-m-gutter pf-m-dividers pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}
+  {{#> grid-item}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 4
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 5
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 6
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 7
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 8
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 9
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 10
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 11
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 12
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 13
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 14
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 15
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 16
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 17
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 18
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 19
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 20
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 21
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 22
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 23
+  {{/grid-item}}
+{{/grid}}
+```
+
 ### Smart with overrides (responsive)
 ```hbs
 {{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}

@@ -9,6 +9,28 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for c
       > * {
         --pf-l-grid__item--GridColumnEnd: span #{$col-num};
       }
+
+      &.pf-m-dividers {
+        > * {
+          // stylelint-disable
+          &::after {
+            position: absolute;
+            right: 0;
+            bottom: calc(var(--pf-l-grid--m-gutter--GridGap) / -2);
+            left: 0;
+            content: "";
+            border-bottom: 1px solid rgb(0, 0, 0);
+          }
+
+          $true-col-num: floor($number: 12 / $col-num);
+
+          &:nth-child(#{$true-col-num}n+1):nth-last-child(-n+#{$true-col-num})::after,
+          &:nth-child(#{$true-col-num}n+1):nth-last-child(-n+#{$true-col-num}) ~ *::after {
+            display: none;
+          }
+          // stylelint enable
+        }
+      }
     }
   }
 }
@@ -50,10 +72,12 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for c
 
   > *,
   .pf-l-grid__item {
+    position: relative;
     min-width: 0;
     min-height: 0;
     grid-column-start: var(--pf-l-grid__item--GridColumnStart);
     grid-column-end: var(--pf-l-grid__item--GridColumnEnd);
+    text-align: center;
 
     @include pf-build-css-variable-stack("order", "--pf-l-grid--item--Order", $pf-l-grid--breakpoint-map);
   }

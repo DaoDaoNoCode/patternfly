@@ -2,3 +2,7 @@
   padding: .5rem !important;
   border: 2px dashed #393f44;
 }
+
+#ws-core-l-grid-smart-with-dividers-responsive .pf-l-grid__item {
+  border: none;
+}
